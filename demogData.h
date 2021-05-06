@@ -10,7 +10,7 @@ using namespace std;
   class to represent county demographic data
   from CORGIS - LAB01 starter - replace with your FULL version!
 */
-class demogData {
+class demogData : public regionData {
   public:
     demogData(string inN, string inS, double in65, double in18,
         double in5, int totPop14) :

@@ -11,7 +11,7 @@ using namespace std;
   class to represent police shooting data
   from CORGIS
 */
-class psData {
+class psData : public regionData {
   public:
     //add appropriate function paramaters to constructor once you add data
     psData(string inState) : state(inState) {}
