@@ -33,17 +33,13 @@ int main() {
 
     // report
     string expectReport1 = "State Info: AK, AZ, CA, CO, ID, KS, KY, MN, MT, ND, NE, NM, NV, OK, SD, TX, UT, VA, VT, WA, WI, WY, total states: 22\nNumber of incidents: 87\n"; 
-    string expectReport2 = "Incidents involving fleeing: 28 ratio: 3.11\nIncidents involving mental illness: 15 ratio: 5.80\nMale incidents: 82 female incidents: 5\n";
-    
-    cout << theReport << endl;
+    string expectReport2 = "Incidents involving fleeing: 28 %: 32.18\nIncidents involving mental illness: 15 %: 17.24\nMale incidents: 82 female incidents: 5\n";
 
     if (theReport.length() > expectReport1.length() + expectReport2.length()) {
         std::string subReport1 = theReport.substr(0, expectReport1.length());
-        cout << "difference in characters: " << subReport1.compare(expectReport1);
 
         std::size_t found2 = theReport.find("Incidents involving");
         std::string subReport2 = theReport.substr(found2, expectReport2.length());
-        cout << "difference in characters: " << subReport2.compare(expectReport2);
 
         ASSERT_EQUALS(expectReport1, subReport1);
         ASSERT_EQUALS(expectReport2, subReport2);
