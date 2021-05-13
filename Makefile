@@ -3,7 +3,7 @@ CXX=g++
 
 CXXFLAGS= -g -O3 -std=c++14 
 
-BINARIES=dataProj testPSState testPSSort testBelowPSort testAgDemog
+BINARIES=dataProj testPSState testPSSort testBelowPSort testAgDemog testAgPS
 
 all: ${BINARIES}
 
@@ -12,6 +12,7 @@ tests: ${BINARIES}
 	./testPSSort
 	./testBelowPSort
 	./testAgDemog
+	./testAgPS
 
 
 dataProj: dataAQ.o demogCombo.o demogData.o raceDemogData.o psData.o psCombo.o parse.o main.o
@@ -27,6 +28,9 @@ testBelowPSort: testBelowPSort.o dataAQ.o demogCombo.o demogData.o raceDemogData
 	${CXX} $^ -o $@
 
 testAgDemog: testAgDemog.o dataAQ.o demogCombo.o demogData.o raceDemogData.o psData.o psCombo.o  parse.o tddFuncs.o
+	${CXX} $^ -o $@
+
+testAgPS: testAgPS.o dataAQ.o demogCombo.o demogData.o raceDemogData.o psData.o psCombo.o  parse.o tddFuncs.o
 	${CXX} $^ -o $@
 
 clean:
