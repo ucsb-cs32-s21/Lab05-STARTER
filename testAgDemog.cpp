@@ -38,8 +38,8 @@ int main() {
     // report
     string expectReport1 = "Combo Info: AK, AL, AR, CA, CO, CT, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, MT, NC, ND, NE, NH, NJ, NM, NV, NY, OH, OK, OR, PA, RI, SD, TN, TX, UT, VA, VT, WA, WI, WY, total states: 46\nNumber of Counties: 431 County Demographics Info: comboData, many\n"; 
     string expectReport2 = "Education info: \n(Bachelor or more): 38.30% and total: 19714949\n(high school or more): 91.51% and total: 47106146\npersons below poverty: 7.55% and total: 3885127\nTotal population: 51476603\n";
-    string expectReport3 = "Racial Demographics Info: \n\% American Indian and Alaska Native percent: 0.69 count: 353134\n\% Asian American percent: 7.28 count: 3746101\n\% Black/African American percent: 8.98 count: 4621329\n\% Hispanic or Latinx percent: 10.58 count: 5443695\n\% Native Hawaiian and Other Pacific Islander percent: 0.32 count: 163362\n\% Two or More Races percent: 2.63 count: 1355467\n\% White (inclusive) percent: 80.12 count: 41241007\n\% White (nonHispanic) percent: 71.07 count: 36586915";
-
+    string expectReport3 = "Racial Demographics Info: \n\% American Indian and Alaska Native percent: 0.69 count: 353361\n\% Asian American percent: 7.28 count: 3746319\n\% Black/African American percent: 8.98 count: 4621551\n\% Hispanic or Latinx percent: 10.58 count: 5443920\n\% Native Hawaiian and Other Pacific Islander percent: 0.32 count: 163485\n\% Two or More Races percent: 2.63 count: 1355686\n\% White (inclusive) percent: 80.12 count: 41241222\n\% White (nonHispanic) percent: 71.08 count: 36587127\ntotal Racial Demographic Count: 51476603";
+    
     if (theReport.length() > expectReport1.length() + expectReport2.length() + expectReport3.length()) {
         std::string subReport1 = theReport.substr(0, expectReport1.length());
         
